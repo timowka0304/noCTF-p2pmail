@@ -1,0 +1,11 @@
+version: "0"
+  
+services:
+  server:
+    build: .
+    command: python3 /opt/scripts/listener.py 2
+    volumes:
+      - .:/opt/scripts
+    ports:
+      - "1984:1984"
+    restart: always
